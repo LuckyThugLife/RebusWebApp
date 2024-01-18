@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+List of all Products
+{% endblock %}
+
+{% block content %}
+<div class="mycard">
+    <h1>Products</h1>
+    <ul>
+        {% for x in myproducts %}
+        <li onclick="window.location='details_products/{{ x.id }}'">{{ x.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
